@@ -4,13 +4,17 @@ import Project from "../Project.astro";
 
 // Projects logos
 import socialLogo from "../../assets/logo/social.png";
-import pasteLogo from "../../assets/logo/paste.png";
+import clangLogo from "../../assets/logo/clang.png";
 import honestleeLogo from "../../assets/logo/honestlee.png";
+import pasteLogo from "../../assets/logo/paste.png";
+import quizLogo from "../../assets/logo/quiz.png";
+import linkLogo from "../../assets/logo/link.png";
+import webalertsendLogo from "../../assets/logo/webalertsend.png";
 ---
 
 <Window size="w-[29rem] !justify-start !items-start" contentClasses="p-6">
   <span class="mono italic">projects</span>
-  <div class="flex flex-col gap-2 mt-3">
+  <div class="flex flex-col gap-2 mt-3 max-h-[30rem] overflow-y-scroll">
     <Project
       image={socialLogo}
       title="social.senge1337.cc"
@@ -20,19 +24,61 @@ import honestleeLogo from "../../assets/logo/honestlee.png";
     />
 
     <Project
-      image={pasteLogo}
-      title="paste.senge1337.cc"
-      description="Encrypted pastebin clone"
-      badges={["php", "mysql", "tailwindcss"]}
-      link="https://paste.senge1337.cc"
+      image={clangLogo}
+      title="Egzaminy maturalne z informatyki"
+      description="Polish IT matura exams preparation"
+      badges={["php", "mysql", "tailwindcss", "cplusplus", "python", "docker"]}
+      link="https://senge1337.cc/clang"
     />
 
     <Project
       image={honestleeLogo}
       title="honestlee"
-      description="ngl.link clone"
+      description="NGL clone"
       badges={["react", "reactrouter", "sqlite"]}
       link="https://hn.senge1337.cc"
     />
+
+    <Project
+      image={pasteLogo}
+      title="paste.senge1337.cc"
+      description="Pastebin meant for code, encrypted"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://paste.senge1337.cc"
+    />
+
+    <Project
+      image={quizLogo}
+      title="quiz.senge1337.cc"
+      description="Quiz platform with HTML-over-the-wire"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://quiz.senge1337.cc"
+    />
+
+    <Project
+      image={linkLogo}
+      title="link.senge1337.cc"
+      description="Link shortener (not really)"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://link.senge1337.cc"
+    />
+
+    <Project
+      image={webalertsendLogo}
+      title="webalertsend.senge1337.cc"
+      description="Remote notification app"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://webalertsend.senge1337.cc"
+    />
   </div>
+  <span class="flex justify-center items-center gap-1 text-sm mt-4">
+    more on my
+    <a
+      href="https://github.com/playsenge"
+      class="text-blue-400 hover:text-blue-700 transtion-all"
+      target="_blank"
+    >
+      github profile
+    </a>
+  </span>
 </Window>

@@ -1,0 +1,10 @@
+---
+interface Props {
+  name: string;
+  size?: string;
+}
+
+const { name, size = "" } = Astro.props;
+---
+
+<span class={`material-icons ${size}`}>{name}</span>
