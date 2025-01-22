@@ -1,0 +1,17 @@
+---
+const { title, styles } = Astro.props;
+---
+
+<div
+  class="block w-[15rem] h-[15rem] rounded-xl bg-gray-700 border-2 border-[#5B19B7]"
+>
+  <!-- Titlebar -->
+  <div>
+    {title}
+  </div>
+
+  <!-- Content -->
+  <div>
+    <slot />
+  </div>
+</div>
