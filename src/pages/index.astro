@@ -15,14 +15,16 @@ import ClockWindow from "../components/windows/ClockWindow.astro";
   <!-- IT WOULD TAKE LIKE 8 HOURS I REALLY DONT CARE -->
   <!-- NEGATIVE MARGIN AND EYEBALLING IS GOOD ENOUGH FOR ME -->
 
-  <div class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-    <div class="flex flex-row">
-      <MainWindow />
-      <ProjectsWindow />
-    </div>
-    <div class="flex flex-row mt-[-18.2rem]">
-      <UtilitiesWindow />
-      <ClockWindow />
+  <div class="flex items-center justify-center h-screen v-screen">
+    <div>
+      <div class="flex flex-row">
+        <MainWindow />
+        <ProjectsWindow />
+      </div>
+      <div class="flex flex-row mt-[-18.2rem]">
+        <UtilitiesWindow />
+        <ClockWindow />
+      </div>
     </div>
   </div>
 
