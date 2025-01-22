@@ -3,26 +3,27 @@ import Window from "../Window.astro";
 import MaterialIcon from "../MaterialIcon.astro";
 ---
 
-<Window size="h-[20rem] w-[50rem]">
+<Window size="lg:h-[20rem] p-8 lg:w-[50rem]">
   <div class="text-xl flex flex-col gap-1 justify-center items-center">
     <span>hi, i'm</span>
     <span class="text-4xl font-extrabold mono">senge1337</span>
     <span>and i do some cool nerdy stuff</span>
 
     <div
-      class="mt-8 mono text-sm flex flex-row justify-center items-center gap-1.5"
+      class="mt-8 mono text-sm flex flex-col lg:flex-row justify-center items-center gap-1.5"
     >
       <MaterialIcon size="md-18" name="calendar_month" />
-      <span id="age">16</span> years old /
+      <span><span id="age">16</span> years old</span>
+      <span class="hidden lg:block">/</span>
 
       <MaterialIcon size="md-18" name="person" />
-      any/all /
+      any/all <span class="hidden lg:block">/</span>
 
       <MaterialIcon size="md-18" name="favorite" />
-      aroace /
+      aroace <span class="hidden lg:block">/</span>
 
       <MaterialIcon size="md-18" name="flag" />
-      polish /
+      polish <span class="hidden lg:block">/</span>
 
       <MaterialIcon size="md-18" name="work" />
       wannabe programmer
