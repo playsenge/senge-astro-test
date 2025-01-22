@@ -13,7 +13,7 @@ import MaterialIcon from "../MaterialIcon.astro";
       class="mt-8 mono text-sm flex flex-col lg:flex-row justify-center items-center gap-1.5"
     >
       <MaterialIcon size="md-18" name="calendar_month" />
-      <span><span id="age">16</span> years old</span>
+      <span><span class="age">16</span> years old</span>
       <span class="hidden lg:block">/</span>
 
       <MaterialIcon size="md-18" name="person" />
@@ -37,5 +37,7 @@ import MaterialIcon from "../MaterialIcon.astro";
     new Date("2008-02-14").getFullYear() -
     (new Date() < new Date(new Date().getFullYear(), 1, 14) ? 1 : 0);
 
-  document.getElementById("age")!.innerText = `${age}`;
+  Array.from(document.getElementsByClassName("age")).forEach(
+    (x) => ((x as HTMLElement).innerText = `${age}`)
+  );
 </script>
