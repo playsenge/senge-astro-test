@@ -1,17 +1,17 @@
 ---
-const { title, styles } = Astro.props;
+interface Props {
+  contentClasses?: string;
+  size: string;
+}
+
+const { contentClasses = "", size } = Astro.props;
 ---
 
 <div
-  class="block w-[15rem] h-[15rem] rounded-xl bg-gray-700 border-2 border-[#5B19B7]"
+  class={`rounded-xl m-2 bg-[#000039] border-4 border-[#5B19B7] text-white max-w-full flex justify-center items-center ${size}`}
 >
-  <!-- Titlebar -->
-  <div>
-    {title}
-  </div>
-
   <!-- Content -->
-  <div>
+  <div class={contentClasses}>
     <slot />
   </div>
 </div>

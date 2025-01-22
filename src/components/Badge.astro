@@ -1,0 +1,15 @@
+---
+interface Props {
+  name: string;
+  hoverEffect?: boolean;
+}
+
+const { name, hoverEffect = true } = Astro.props;
+---
+
+<i
+  class={`devicon-${name}-plain transition-all`}
+  onmouseenter={hoverEffect ? "this.classList.add('colored')" : ""}
+  onmouseleave={hoverEffect ? "this.classList.remove('colored')" : ""}
+>
+</i>

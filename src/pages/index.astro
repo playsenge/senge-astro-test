@@ -1,14 +1,37 @@
 ---
 import Window from "../components/Window.astro";
 import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+
+// Windows
+import MainWindow from "../components/windows/MainWindow.astro";
+import ProjectsWindow from "../components/windows/ProjectsWindow.astro";
+import UtilitiesWindow from "../components/windows/UtilitiesWindow.astro";
+import ClockWindow from "../components/windows/ClockWindow.astro";
 ---
 
 <Layout>
-  <Window title="main window">
-    <div class="text-xl flex flex-col gap-1">
-      <span>hi, i'm</span>
-      <span class="text-4xl">senge1337</span>
-      <span>and i do some cool nerdy stuff</span>
-    </div>
-  </Window>
+  <MainWindow />
+  <ProjectsWindow />
+  <UtilitiesWindow />
+  <ClockWindow />
+
+  <style is:global>
+    .mono {
+      font-family: "JetBrains Mono", serif;
+    }
+
+    .inter {
+      font-family: "Inter", serif;
+    }
+
+    @layer logos {
+      .colored {
+      }
+    }
+
+    .hover\:colored:hover {
+      @apply colored;
+    }
+  </style>
 </Layout>

@@ -1,0 +1,38 @@
+---
+import Window from "../Window.astro";
+import Project from "../Project.astro";
+
+// Projects logos
+import socialLogo from "../../assets/logo/social.png";
+import pasteLogo from "../../assets/logo/paste.png";
+import honestleeLogo from "../../assets/logo/honestlee.png";
+---
+
+<Window size="w-[29rem] !justify-start !items-start" contentClasses="p-6">
+  <span class="mono italic">projects</span>
+  <div class="flex flex-col gap-2 mt-3">
+    <Project
+      image={socialLogo}
+      title="social.senge1337.cc"
+      description="Simple Twitter-style social media platform"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://social.senge1337.cc"
+    />
+
+    <Project
+      image={pasteLogo}
+      title="paste.senge1337.cc"
+      description="Encrypted pastebin clone"
+      badges={["php", "mysql", "tailwindcss"]}
+      link="https://paste.senge1337.cc"
+    />
+
+    <Project
+      image={honestleeLogo}
+      title="honestlee"
+      description="ngl.link clone"
+      badges={["react", "reactrouter", "sqlite"]}
+      link="https://hn.senge1337.cc"
+    />
+  </div>
+</Window>
